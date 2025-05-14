@@ -4,12 +4,15 @@
   "version": "0.1",
   "manifest_version": 3,
   "action": {
-    "default_popup": "popup.html",
-    "default_icon": "images.png",
+    "default_popup": "src/popup.html",
+    "default_icon": "assets/images.png",
     "default_title": "StudySmarter"
   },
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "src/background.js"
   },
-  "permissions": ["tabs", "activeTab", "webNavigation", "notifications"]
+  "permissions": ["tabs", "activeTab", "webNavigation", "notifications"],
+  "icons": {
+    "48": "assets/bell.png"
+  }
 }
