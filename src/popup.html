@@ -3,22 +3,38 @@
   <head>
     <title>StudySmarter</title>
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
       body {
-        font-family: Arial, sans-serif;
-        width: 300px;
+        font-family: "Montserrat", sans-serif;
+        width: 320px;
         margin: 0;
         padding: 10px;
-        background: #f9f9f9;
+        background: linear-gradient(135deg, #f84ad8, #6c63ff);
+        border-radius: 12px;
+      }
+
+      .card {
+        background: white;
+        border-radius: 16px;
+        padding: 20px;
+        width: 280px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
       }
 
       h1 {
         font-size: 18px;
+        font-weight: 600;
         margin-bottom: 10px;
+        color: #333;
+        text-align: center;
       }
 
       ul {
         list-style: none;
         padding: 0;
+        margin-top: 8px;
+        max-height: 240px;
+        overflow-y: auto;
       }
 
       li {
@@ -26,20 +42,39 @@
         display: flex;
         justify-content: space-between;
         border-bottom: 1px solid #ddd;
+        font-size: 14px;
       }
 
       .domain {
+        font-size: 14px;
+        color: #202020;
+        font-weight: 500;
+      }
+
+      .list-header {
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
         font-weight: bold;
+        padding: 6px 0;
+        border-bottom: 2px solid #eee;
+        color: #666;
       }
 
       .time {
-        color: #555;
+        color: #202020;
       }
     </style>
   </head>
   <body>
-    <h1>Your 10 sites with most time spent</h1>
-    <ul id="usageList"></ul>
+    <div class="card">
+      <h1>StudySmarter</h1>
+      <div class="list-header">
+        <span>Domain</span>
+        <span>Minutes</span>
+      </div>
+      <ul id="usageList"></ul>
+    </div>
     <script src="popup.js"></script>
   </body>
 </html>
