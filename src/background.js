@@ -100,5 +100,12 @@ setInterval(checkUsageLimits, 1 * 1000);
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.type === "getUsageData") {
     sendResponse({ usageLog });
+  } else if (message.type === "resetTracking") {
+    usageLog = {};
+    notificationShown = {};
+    domainSamples = {};
+    notifiedThresholds = {};
+    lastNotifiedDomain = null;
+    sendResponse({ success: true });
   }
 });

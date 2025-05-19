@@ -45,6 +45,23 @@
         font-size: 14px;
       }
 
+      #resetBtn {
+        margin-top: 16px;
+        width: 100%;
+        padding: 8px 12px;
+        background: linear-gradient(135deg, #6c63ff, #f84ad8);
+        color: white;
+        border: none;
+        border-radius: 12px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      #resetBtn:hover {
+        background: linear-gradient(135deg, #4d48e4, #d546c2);
+      }
+
       .domain {
         font-size: 14px;
         color: #202020;
@@ -74,6 +91,7 @@
         <span>Minutes</span>
       </div>
       <ul id="usageList"></ul>
+      <button id="resetBtn">Reset tracking</button>
     </div>
     <script src="popup.js"></script>
   </body>

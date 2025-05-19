@@ -23,3 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
     return `${minutes}m ${remainingSeconds}s`;
   }
 });
+
+document.getElementById("resetBtn").addEventListener("click", () => {
+  chrome.runtime.sendMessage({ type: "resetTracking" }, () => {
+    location.reload();
+  });
+});
